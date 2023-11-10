@@ -13,3 +13,5 @@ orden de ejecución de los mismos junto con los apellidos y nombre de los alumno
 GAMMA:
 a- Desde GitHub, con la opción que es "Sync Fork"
 b- De forma manual, si
+c- De forma manual, si
+d- No, y si por algún motivo se generan conflictos, se pueden solucionar
