@@ -11,7 +11,44 @@ e- realizar un listado, paso a paso ,de los comando necesarios para resolver est
 orden de ejecución de los mismos junto con los apellidos y nombre de los alumnos
 
 GAMMA:
-a- Desde GitHub, con la opción que es "Sync Fork"
-b- De forma manual, si
-c- De forma manual, si
-d- No, y si por algún motivo se generan conflictos, se pueden solucionar
+a- Desde GitHub, con la opción que es "Sync Fork".
+b- De forma manual, si.
+c- De forma manual, si.
+d- No, y si por algún motivo se generan conflictos, se pueden solucionar.
+e- Lucas Carmagnola (BETA):
+(crea repositorio con README.md)
+git add fork.txt
+git commit -m "Create fork.txt"
+git push origin main
+
+Franco Jimenez (GAMMA):
+(Hace fork del repo de BETA desde GitHub)
+git clone https://github.com/francojimenezcopati/TP_SO_i2_105.git (En una carpeta nueva)
+git add fork.txt
+git commit -m "GAMMA modifica fork.txt"
+git push origin main
+
+Lucas Gómez (ALFA):
+ALFA agrega sus datos a su repositorio
+(Hace fork del repo de BETA desde GitHub)
+git clone https://github.com/LucasG05/TP_SO_i2_105.git (En una carpeta nueva)
+git add fork.txt
+git commit -m "ALFA agrega sus datos a su repositorio"
+git push origin main
+
+Lucas Carmagnola (BETA):
+(Hace una pull request del repo de GAMMA y hace el merge sin conflictos)
+git clone https://github.com/LucasCarmagnola/TP_SO_i2_105.git (En una carpeta nueva)
+git add NuevoDato.txt
+git commit -m "Agregado de NuevoDato.txt"
+git push origin main
+(Intenta hacer pull request del repo de ALFA y hay conflictos)
+git clone https://github.com/LucasG05/TP_SO_i2_105.git (En una carpeta nueva)
+git remote add upstream https://github.com/LucasCarmagnola/TP_SO_i2_105.git
+git fetch upstream
+git pull upstream main
+(resuelve los conflictos desde VS Code)
+git remote set-url origin https://github.com/LucasCarmagnola/TP_SO_i2_105.git
+git add .
+git commit -m "Merge branch 'main' of https://github.com/LucasCarmagnola/TP_SO_i2_10"
+git push origin main
